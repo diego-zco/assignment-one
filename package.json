@@ -1,0 +1,22 @@
+{
+  "name": "assignment-one",
+  "version": "1.0.0",
+  "description": "Working on the first assignment of the testcafe workshop",
+  "main": "index.js",
+  "scripts": {
+    "test-all-chrome": "testcafe chrome ./page_model/tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diego-zco/assignment-one.git"
+  },
+  "author": "diego-zco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diego-zco/assignment-one/issues"
+  },
+  "homepage": "https://github.com/diego-zco/assignment-one#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
