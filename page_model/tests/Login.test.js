@@ -7,7 +7,7 @@ fixture('Login feature testing')
     .page `https://www.saucedemo.com`
 
 
-//Test Case 1: Login with a valid user :: Expected result: User navigates to the Product's page  STATUS: DONE
+//Test Case 1: Login with a valid user :: Expected result: User navigates to the Product's page
 test('1 - Login with valid user', async t => {
     await LoginPage.performLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
     await t
@@ -17,7 +17,7 @@ test('1 - Login with valid user', async t => {
         .expect(ProductsPage.shoppingCartButton.exists).ok()
 })
 
-//Test Case 2: Login with a invalid user :: Expected result: Error message is displayed  STATUS: DONE
+//Test Case 2: Login with a invalid user :: Expected result: Error message is displayed
 test('2 - Login with an invalid user', async t => {
     await LoginPage.performLogin(CREDENTIALS.INVALID_USER.USERNAME, CREDENTIALS.INVALID_USER.PASSWORD)
     await t
@@ -26,7 +26,7 @@ test('2 - Login with an invalid user', async t => {
 })
 
 
-//Test Case 3: Logout from Products page :: Expected result: User navigates to login page  STATUS: DONE
+//Test Case 3: Logout from Products page :: Expected result: User navigates to login page
 test('3 - Logout from products page', async t => {
     await LoginPage.performLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
     await t
