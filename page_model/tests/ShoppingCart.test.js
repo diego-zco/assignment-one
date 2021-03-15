@@ -10,7 +10,7 @@ fixture('Shopping products fixture testing')
     .page `https://www.saucedemo.com`
 
 
-//Test Case 4: Navigate to the shopping cart:: Expected result: User navigates to the shopping cart page  STATUS: DONE
+//Test Case 4: Navigate to the shopping cart:: Expected result: User navigates to the shopping cart page
 test('4 - Navigate to the shopping cart', async t => {
     await LoginPage.performLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
     await t
@@ -19,7 +19,7 @@ test('4 - Navigate to the shopping cart', async t => {
 
 })
 
-//Test Case 5: Add single item to shopping cart :: Expected result: Item has been added to the shopping cart  STATUS: DONE
+//Test Case 5: Add single item to shopping cart :: Expected result: Item has been added to the shopping cart
 test('5 - Add a single random item to the shopping cart', async t => {
     await LoginPage.performLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
     const elementsToAdd = 1
@@ -30,7 +30,7 @@ test('5 - Add a single random item to the shopping cart', async t => {
         .expect(YourCartPage.inventoryItemNames.count).eql(elementsToAdd)
 })
 
-//Test Case 6: Add multiple items to the shopping cart :: Expected result: All he items have been added to the shopping cart  STATUS: DONE
+//Test Case 6: Add multiple items to the shopping cart :: Expected result: All he items have been added to the shopping cart
 test('6 - Add multiple random items to the shopping cart', async t => {
     await LoginPage.performLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
     const totalElements = await ProductsPage.addToCartButton.count
@@ -42,7 +42,7 @@ test('6 - Add multiple random items to the shopping cart', async t => {
         .expect(YourCartPage.inventoryItemNames.count).eql(elementsToAdd)
 })
 
-//Test Case 7: Continue with missing mail information:: Expected result: Error message is displayed in the user information page  STATUS: DONE
+//Test Case 7: Continue with missing mail information:: Expected result: Error message is displayed in the user information page
 test('7 - Continue at Checkout Page with missing information', async t => {
     await LoginPage.performLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
     const totalElements = await ProductsPage.addToCartButton.count
@@ -57,7 +57,7 @@ test('7 - Continue at Checkout Page with missing information', async t => {
 
 })
 
-//Test Case 8: Fill user's information :: Expected result: User navigates to the overview page once the data has been filled  STATUS: DONE
+//Test Case 8: Fill user's information :: Expected result: User navigates to the overview page once the data has been filled
 test('8 - Continue to Overview Page with user information', async t => {
     await LoginPage.performLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
     const totalElements = await ProductsPage.addToCartButton.count
@@ -73,7 +73,7 @@ test('8 - Continue to Overview Page with user information', async t => {
         
 })
 
-//Test Case 9: Final order items :: Expected result: items in the overview page match with the added items  STATUS: DONE
+//Test Case 9: Final order items :: Expected result: items in the overview page match with the added items
 test('9 - Items in Overview Page', async t => {
     await LoginPage.performLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
     const totalElements = await ProductsPage.addToCartButton.count
@@ -97,7 +97,7 @@ test('9 - Items in Overview Page', async t => {
 
 })
 
-//Test Case 10: Complete purchase :: Expected result: user navigates to the confirmation page  STATUS:
+//Test Case 10: Complete purchase :: Expected result: user navigates to the confirmation page
 test('10 - Complete purchase', async t => {
     await LoginPage.performLogin(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
     const totalElements = await ProductsPage.addToCartButton.count
